@@ -1,13 +1,16 @@
 //your JS code here. If required.
-document.addEventListener('DOMContentLoaded', function(){
-	const searchCom = document.getElementById('searchCom');
-	const searchIn = document.getElementById('searchIn');
-	const searchBtn = document.getElementById('searchBtn');
+document.addEventListener('DOMContentLoaded', function() {
+  // Get elements
+  const searchComponent = document.getElementById('searchComponent');
+  const searchInput = document.getElementById('searchInput');
+  const searchButton = document.getElementById('searchButton');
 
-	function Search(){
-		searchCom.classList.add('active');
-		searchIn.focus();
-	}
+  // Function to toggle active state and focus input
+  function activateSearch() {
+    searchComponent.classList.add('active');
+    searchInput.focus();
+  }
 
-	searchBtn.addEventListener('click', Search);
+  // Event listener for the button click
+  searchButton.addEventListener('click', activateSearch);
 });
